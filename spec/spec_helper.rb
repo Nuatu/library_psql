@@ -4,6 +4,7 @@ require 'pry'
 require 'book'
 require 'patron'
 require 'author'
+require 'books_authors'
 
 ATTRIBUTES = {'title' => 'weird_book', 'name' => 'Clive Barker'}
 
@@ -14,6 +15,7 @@ RSpec.configure do |config|
     DB.exec("DELETE FROM books *;")
     DB.exec("DELETE FROM authors *;")
     DB.exec("DELETE FROM copies *;")
+    DB.exec("DELETE FROM books_authors *;")
   end
 end
 
