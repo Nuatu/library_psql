@@ -24,6 +24,15 @@ class Book
   def ==(another_book)
     self.title == another_book.title
   end
+
+  def update_title(new_title)
+    DB.exec("UPDATE books SET title = '#{new_title}' WHERE id = '#{@id}';")
+    @title = new_title
+  end
+
+  def delete
+    DB.exec("DELETE FROM books where id = '#{@id}';")
+  end
 end
 
 
