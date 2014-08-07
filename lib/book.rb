@@ -11,7 +11,6 @@ class Book
     books = []
     results = DB.exec("SELECT * FROM books;")
     results.each do |book|
-
     books << Book.new(book)
     end
     books

@@ -3,8 +3,9 @@ require 'pg'
 require 'pry'
 require 'book'
 require 'patron'
+require 'author'
 
-ATTRIBUTES = {'title' => 'weird_book'}
+ATTRIBUTES = {'title' => 'weird_book', 'name' => 'Clive Barker'}
 
 DB = PG.connect({:dbname => 'library_test'})
 
