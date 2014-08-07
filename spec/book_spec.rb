@@ -16,6 +16,7 @@ describe 'Book' do
     it 'saves a book to the database' do
       test_book = Book.new(ATTRIBUTES)
       test_book.save
+      binding.pry
       expect(Book.all).to eq [test_book]
     end
   end

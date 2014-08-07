@@ -4,7 +4,7 @@ require 'pry'
 require 'book'
 require 'patron'
 
-ATTRIBUTES = {"name" => 'name', "title" => 'weird_book'}
+ATTRIBUTES = {'title' => 'weird_book'}
 
 DB = PG.connect({:dbname => 'library_test'})
 
